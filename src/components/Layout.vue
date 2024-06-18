@@ -197,14 +197,21 @@ const experience = [
 <template>
     <div class="flex min-w-full min-h-screen">
         <div class="w-[100%] lg:w-[75%] bg-sky-200 p-2 space-y-4 lg:p-2 md:space-y-0">
-            <div class="flex  justify-start p-2 mx-2  rounded-md  bg-sky-500">
-                <img class="w-20 h-auto md:w-28  md:h-28 rounded-lg" alt="Massay Bah" src="/images/massaybah.jpeg" />
-                <div
-                    class="flex flex-col ml-2  rounded-md px-1 md:items-start md:justify-start items-start justify-center">
-                    <h1 class="font-bold text-sm md:text-lg">Massay Bah</h1>
-                    <h1 class="font-semibold text-sm md:text-lg">Software Engineer</h1>
-                    <h1 class="font-semibold text-sm md:text-lg">Banjul, The Gambia</h1>
-                    <h1 class="font-semibold text-sm md:text-lg">(+220) 3199935 / 2565405</h1>
+            <div class="flex justify-between">
+                <div class="flex  justify-start p-2 mx-2  rounded-md  bg-sky-500">
+                    <img class="w-20 h-auto md:w-28  md:h-28 rounded-lg" alt="Massay Bah"
+                        src="/images/massaybah.jpeg" />
+                    <div
+                        class="flex flex-col ml-2  rounded-md px-1 md:items-start md:justify-start items-start justify-center">
+                        <h1 class="font-bold text-sm md:text-lg">Massay Bah</h1>
+                        <h1 class="font-semibold text-sm md:text-lg">Software Engineer</h1>
+                        <h1 class="font-semibold text-sm md:text-lg">Banjul, The Gambia</h1>
+                        <h1 class="font-semibold text-sm md:text-lg">(+220) 3199935 / 2565405</h1>
+                    </div>
+                </div>
+                <div class="bg-red-900 flex">
+                    <button class="px-8 bg-indigo-300 ">Hire Me</button>
+                    <button class="px-8">LinkedIn</button>
                 </div>
             </div>
             <div class="p-2 flex flex-col space-y-2">
@@ -264,8 +271,11 @@ const experience = [
 
         </div>
 
-        <div class="lg:w-[25%] lg:inline-block bg-yellow-100 hidden">
-            Side B
+        <div class="lg:w-[25%] p-2 lg:inline-block bg-sky-200 hidden">
+
+            <div class="bg-yellow-500 rounded-md h-[198px]">
+                Side B
+            </div>
         </div>
 
         <!-- <nav class="p-2 h-16">
