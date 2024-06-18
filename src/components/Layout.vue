@@ -64,12 +64,211 @@ const frameworks = [
     }
 ]
 
+
+const education = [
+    {
+        name: "Computer Science",
+        university: "University of The Gambia",
+        timeFrame: {
+            from: 'September, 2011',
+            to: 'January, 2014'
+        },
+
+    }
+]
+
+const experience = [
+    {
+        company: "GICTA",
+        title: "Manager for Data and Application Services",
+        timeFrame: {
+            from: 'March, 2024',
+            to: 'curent'
+        },
+        responsibilities: [
+            {
+                title: 'hello world'
+            },
+            {
+                title: 'hello world 1'
+            }
+        ]
+    },
+    {
+        company: "GNPC",
+        title: "IT Manager",
+        timeFrame: {
+            from: 'April, 2021',
+            to: 'May 2024'
+        },
+        responsibilities: [
+            {
+                title: 'hello world'
+            },
+            {
+                title: 'hello world 1'
+            }
+        ]
+    },
+    {
+        company: "GNPC",
+        title: "Assistant IT Manager",
+        timeFrame: {
+            from: 'January, 2019',
+            to: 'April 2021'
+        },
+        responsibilities: [
+            {
+                title: 'hello world'
+            },
+            {
+                title: 'hello world 1'
+            }
+        ]
+    },
+    {
+        company: "GNPC",
+        title: "Senior IT Admin",
+        timeFrame: {
+            from: 'December, 2017',
+            to: 'December 2019'
+        },
+        responsibilities: [
+            {
+                title: 'hello world'
+            },
+            {
+                title: 'hello world 1'
+            }
+        ]
+    },
+    {
+        company: "Volo Africa",
+        title: "Software Developer",
+        timeFrame: {
+            from: 'October, 2015',
+            to: 'October 2017'
+        },
+        responsibilities: [
+            {
+                title: 'hello world'
+            },
+            {
+                title: 'hello world 1'
+            }
+        ]
+    },
+    {
+        company: "Pristine Consulting",
+        title: "Software Developer",
+        timeFrame: {
+            from: 'April, 2015',
+            to: 'September 2017'
+        },
+        responsibilities: [
+            {
+                title: 'hello world'
+            },
+            {
+                title: 'hello world 1'
+            }
+        ]
+    },
+    {
+        company: "Insist Global",
+        title: "Software Developer Intern",
+        timeFrame: {
+            from: 'April, 2013',
+            to: 'December 2013'
+        },
+        responsibilities: [
+            {
+                title: 'hello world'
+            },
+            {
+                title: 'hello world 1'
+            }
+        ]
+    }
+]
+
 </script>
 
 <template>
-    <div class="bg-gray-100 min-w-full min-h-screen">
+    <div class="flex min-w-full min-h-screen">
+        <div class="w-[100%] lg:w-[75%] bg-sky-200 p-2 space-y-4 lg:p-2 md:space-y-0">
+            <div class="flex  justify-start p-2 mx-2  rounded-md  bg-sky-500">
+                <img class="w-20 h-auto md:w-28  md:h-28 rounded-lg" alt="Massay Bah" src="/images/massaybah.jpeg" />
+                <div
+                    class="flex flex-col ml-2  rounded-md px-1 md:items-start md:justify-start items-start justify-center">
+                    <h1 class="font-bold text-sm md:text-lg">Massay Bah</h1>
+                    <h1 class="font-semibold text-sm md:text-lg">Software Engineer</h1>
+                    <h1 class="font-semibold text-sm md:text-lg">Banjul, The Gambia</h1>
+                    <h1 class="font-semibold text-sm md:text-lg">(+220) 3199935 / 2565405</h1>
+                </div>
+            </div>
+            <div class="p-2 flex flex-col space-y-2">
+                <div class="border bg-gray-50 p-2 rounded-md">
+                    <h1 class="font-semibold text-center leading-6 lg:text-2xl text-lg">Projects</h1>
+                    <ol>
+                        <li v-for="(project, index) in projects" :key="index" class="lg:text-lg text-sm leading-8">
+                            {{ project.name }}
+                        </li>
+                    </ol>
+                </div>
 
-        <nav class="p-2 h-16">
+                <div class="border  bg-gray-50 p-2 rounded-md">
+                    <h1 class="font-semibold text-center leading-6 lg:text-2xl text-lg">Languages</h1>
+                    <ul>
+                        <li v-for="(project, index) in programmingLanguages" :key="index">
+                            {{ project.name }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="  bg-gray-50 p-2 rounded-md">
+                    <h1 class="font-semibold text-center leading-6 lg:text-2xl text-lg">Frameworks</h1>
+                    <ul>
+                        <li v-for="(project, index) in frameworks" :key="index">
+                            {{ project.name }}
+                        </li>
+                    </ul>
+                </div>
+                <div class=" bg-gray-50 p-2 rounded-md">
+                    <h1 class="text-center leading-6 lg:text-2xl text-lg my-2 font-semibold">Experience</h1>
+
+                    <div class="flex flex-col gap-2">
+
+                        <div v-for="(ex, index) in experience" :key="index" class="p-1 rounded-md">
+
+                            <h1 class="font-semibold lg:text-2xl text-lg"> {{ ex.company }}</h1>
+                            <h3> {{ ex.title }}</h3>
+                            <h3> {{ ex.timeFrame.from }} - {{ ex.timeFrame.to }}</h3>
+
+                            <h4 class="font-bold">Responsibilities</h4>
+                            <ul>
+                                <li v-for="(res, indexInner)  in ex.responsibilities" :key="indexInner">
+
+                                    {{ res.title }}
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="lg:w-[25%] lg:inline-block bg-yellow-100 hidden">
+            Side B
+        </div>
+
+        <!-- <nav class="p-2 h-16">
 
             <ul class="flex justify-evenly space-x-2">
                 <li class="flex flex-col items-center bg-blue-300 flex-1 py-2 rounded-md ">
@@ -133,22 +332,17 @@ const frameworks = [
 
                 </li>
             </ul>
-        </nav>
-
-        <div class="flex items-center justify-between p-2 mx-2 my-4 rounded-md border">
-            <div class="flex flex-col">
-                <h1 class="font-extrabold md:text-lg">Massay Bah</h1>
-            <h1 class="font-extrabold md:text-lg">Software Engineer</h1>
-            <h1 class="font-extrabold md:text-lg">Massay Bah</h1>
-            </div>
+        </nav> -->
+        <!-- <div class="flex  justify-start p-2 mx-2  rounded-md border bg-blue-400">
             <img class="w-20 h-auto rounded-lg" alt="Massay Bah" src="/images/massaybah.jpeg" />
+            <div class="flex flex-col ml-2  rounded-md px-1">
+                <h1 class="font-extrabold md:text-lg">Massay Bah</h1>
+                <h1 class="font-extralight md:text-lg">Software Engineer</h1>
+                <h1 class="font-extralight md:text-lg">Banjul, The Gambia</h1>
+            </div>
         </div>
-
-
         <div class="flex space-x-2 p-4 ">
-
-            <div class="min-w-[40%] border min-h-full bg-gray-300 p-2 rounded-md">
-
+            <div class="min-w-[40%] border min-h-full bg-gray-50 p-2 rounded-md">
                 <h1 class="font-extralight text-center leading-6 text-2xl">Projects</h1>
                 <ul>
                     <li v-for="(project, index) in projects" :key="index">
@@ -156,8 +350,7 @@ const frameworks = [
                     </li>
                 </ul>
             </div>
-
-            <div class="min-w-[40%] border min-h-full  bg-gray-300 p-2 rounded-md">
+            <div class="min-w-[40%] border min-h-full  bg-gray-50 p-2 rounded-md">
 
                 <h1 class="font-extralight text-center leading-6 text-2xl">Programing Languages</h1>
                 <ul>
@@ -166,15 +359,7 @@ const frameworks = [
                     </li>
                 </ul>
             </div>
-
-        </div>
-
-
-
-
-
-
-
+        </div> -->
     </div>
 </template>
 
