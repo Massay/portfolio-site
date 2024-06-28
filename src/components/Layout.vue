@@ -17,37 +17,79 @@ const projects = [
     },
     {
         name: 'Medical Insurance Management System',
-        summary: "",
+        summary: "An in-house medical insurance management system for staff is a tailored solution designed to manage and streamline the health insurance benefits provided to employees within an organization. This system helps in administering, tracking, and optimizing the medical insurance plans and claims for staff, ensuring that they receive the necessary support and coverage efficiently",
+        features: [
+            {
+                name: 'Policy Administration',
+            },
+            {
+                name: 'Claims Management'
+            },
+            {
+                name: 'Employee Portal'
+            },
+            {
+                name: 'Billing and Payments'
+            },
+            {
+                name: 'Provider Network Management'
+            },
+            {
+                name: 'Reporting and Analytics'
+            },
+            {
+                name: 'Compliance and Security'
+            }, 
+            {
+                name: 'Integration and Accessibility'
+            }
+        ],
         images: [
+            {
+                name: "Login Page",
+                logo: "loginPage.png"
+            },
+            {
+                name: "Dashboard View",
+                logo: "dashboardView.png"
+            },
+            {
+                name: "Clinics",
+                logo: "clinics_list.png"
+            },
 
+            {
+                name: "Visits",
+                logo: "visits_List.png"
+            }
         ]
     },
     {
         name: 'Visitors Log Management System',
         summary: "",
         images: [
-            
+
         ]
     },
     {
         name: 'WARGA WARGA E-Sports Platform for Gambia Footballers',
         summary: "",
         images: [
-            
+
         ]
     },
     {
         name: 'Pluto Integrated Solution',
         summary: "",
         images: [
-            
+
         ]
     },
     {
         name: 'Coupon Management System  system',
         summary: "",
         images: [
-            
+
         ]
     }
 ]
@@ -99,7 +141,7 @@ const programmingLanguages = [
     },
     {
         name: "Kotlin",
-        logo: 'icons8-vuejs-64.png'
+        logo: 'icons8-kotlin-48.png'
     },
     {
         name: "Mysql",
@@ -316,11 +358,12 @@ const experience = [
             <div class="py-2 flex flex-col space-y-2">
                 <div class="border bg-gray-50 p-2 rounded-md">
                     <h1 class="font-semibold text-center leading-6 lg:text-2xl text-lg">Projects</h1>
-                    <div v-for="(project, index) in projects" :key="index" class="lg:text-lg text-sm leading-8">
-                        <h1 class="font-mono">[{{ index + 1 }}] {{ project.name }}</h1>
-                        <p class="text-xs lg:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-                            laudantium sint doloribus earum numquam impedit minima ea praesentium qui sit error quod
-                            quidem, esse id alias, exercitationem, quisquam asperiores dolor.</p>
+                    <div v-for="(project, index) in projects" :key="index" class="lg:text-lg text-sm leading-8 border my-4 p-2">
+                        <h1 class="font-mono">[{{ index + 1 }}] <span class="font-bold"> {{ project.name }}</span> </h1>
+                        <p class="text-xs lg:text-sm">{{project.summary}}</p>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 p-1">  
+                                <img  v-for="(image) in project.images" :src="'/portfolio-site/images/insurance/' + image.logo " class="rounded-md" :alt="image.logo">
+                        </div>
                     </div>
                 </div>
 
