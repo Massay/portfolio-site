@@ -4,20 +4,54 @@ const projects = [
     {
         name: 'Fuel Pump Management System',
         summary: "Petrol Station Management software to track and monitor sales activities across service station. This app provides a centralize database to monitor sales activities across service stations.",
+        folder: "fuel",
         images: [
+
+
             {
                 name: "",
-                logo: ""
+                logo: "current-page-analysis-per-station.png"
             },
             {
                 name: "",
-                logo: ""
-            }
+                logo: "current-page-analysis-per-station-variance-checker.png"
+            },
+            {
+                name: "",
+                logo: "creditsales.png"
+            },
+            {
+                name: "",
+                logo: "home-page.png"
+            },
+
+            {
+                logo: "customer_report.png"
+            }, {
+                logo: "deliveries.png"
+            },
+            {
+                logo: "entire-day-report.png"
+            },
+            {
+                logo: "fuelpump-menu-for-station-supervisor-menu-items.png"
+            },
+            {
+                name: "",
+                logo: "cheque_sales.png"
+            },
+            {
+                logo: "FuelTransfer.png"
+            },
+            {
+                logo: "postpaid.png"
+            },
         ]
     },
     {
         name: 'Medical Insurance Management System',
         summary: "An in-house medical insurance management system for staff is a tailored solution designed to manage and streamline the health insurance benefits provided to employees within an organization. This system helps in administering, tracking, and optimizing the medical insurance plans and claims for staff, ensuring that they receive the necessary support and coverage efficiently",
+        folder: "insurance",
         features: [
             {
                 name: 'Policy Administration',
@@ -39,7 +73,7 @@ const projects = [
             },
             {
                 name: 'Compliance and Security'
-            }, 
+            },
             {
                 name: 'Integration and Accessibility'
             }
@@ -358,11 +392,14 @@ const experience = [
             <div class="py-2 flex flex-col space-y-2">
                 <div class="border bg-gray-50 p-2 rounded-md">
                     <h1 class="font-semibold text-center leading-6 lg:text-2xl text-lg">Projects</h1>
-                    <div v-for="(project, index) in projects" :key="index" class="lg:text-lg text-sm leading-8 border my-4 p-2">
+                    <div v-for="(project, index) in projects" :key="index"
+                        class="lg:text-lg text-sm leading-8 border my-4 p-2">
                         <h1 class="font-mono">[{{ index + 1 }}] <span class="font-bold"> {{ project.name }}</span> </h1>
-                        <p class="text-xs lg:text-sm">{{project.summary}}</p>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 p-1">  
-                                <img  v-for="(image) in project.images" :src="'/portfolio-site/images/insurance/' + image.logo " class="rounded-md" :alt="image.logo">
+                        <p class="text-xs lg:text-sm">{{ project.summary }}</p>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 p-1">
+                            <img v-for="(image) in project.images"
+                                :src="'/portfolio-site/images/' + project.folder + '/' + image.logo"
+                                class="object-fill w-auto h-auto rounded-md" :alt="image.logo">
                         </div>
                     </div>
                 </div>
