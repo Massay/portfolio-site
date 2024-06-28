@@ -396,10 +396,12 @@ const experience = [
                         class="lg:text-lg text-sm leading-8 border my-4 p-2">
                         <h1 class="font-mono">[{{ index + 1 }}] <span class="font-bold"> {{ project.name }}</span> </h1>
                         <p class="text-xs lg:text-sm">{{ project.summary }}</p>
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 p-1">
-                            <img v-for="(image) in project.images"
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 p-2  overflow-hidden">
+                            <div  v-for="(image) in project.images" class="h-60 w-auto object-cover overflow-hidden">
+                                <img
                                 :src="'/portfolio-site/images/' + project.folder + '/' + image.logo"
-                                class="object-fill w-auto h-auto rounded-md" :alt="image.logo">
+                                class="object-fill w-auto h-auto rounded-md border" :alt="image.logo">
+                            </div>
                         </div>
                     </div>
                 </div>
