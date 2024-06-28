@@ -332,7 +332,7 @@ const experience = [
                         <div v-for="(project, index) in programmingLanguages" :key="index"
                             class="bg-slate-950 text-gray-50 rounded-md flex flex-col px-2 py-8 justify-center items-center">
                             <span>
-                                <img :src="'portfolio-site/images/' + project.logo" :alt="project.name">
+                                <img :src="'/portfolio-site/images/' + project.logo" :alt="project.name">
                             </span>
                             <span class="font-bold"> {{ project.name }}</span>
                         </div>
