@@ -328,7 +328,7 @@ const experience = [
                     <h1 class="font-semibold text-center leading-6 lg:text-2xl text-lg my-8">Skills & programming
                         Languages</h1>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-6 gap-2">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-1 xl:grid-cols-6 md:gap-4 lg:gap-2">
                         <div v-for="(project, index) in programmingLanguages" :key="index"
                             class="bg-slate-950 text-gray-50 rounded-md flex flex-col px-2 py-8 justify-center items-center">
                             <span>
