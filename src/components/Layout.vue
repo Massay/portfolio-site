@@ -2,22 +2,53 @@
 
 const projects = [
     {
-        name: 'Fuel Pump Management System'
+        name: 'Fuel Pump Management System',
+        summary: "Petrol Station Management software to track and monitor sales activities across service station. This app provides a centralize database to monitor sales activities across service stations.",
+        images: [
+            {
+                name: "",
+                logo: ""
+            },
+            {
+                name: "",
+                logo: ""
+            }
+        ]
     },
     {
-        name: 'Medical Insurance Management System'
+        name: 'Medical Insurance Management System',
+        summary: "",
+        images: [
+
+        ]
     },
     {
-        name: 'Visitors Log Management System'
+        name: 'Visitors Log Management System',
+        summary: "",
+        images: [
+            
+        ]
     },
     {
-        name: 'E-Sports Platform for Gambia Footballers'
+        name: 'WARGA WARGA E-Sports Platform for Gambia Footballers',
+        summary: "",
+        images: [
+            
+        ]
     },
     {
-        name: 'Pluto Integrated Solution'
+        name: 'Pluto Integrated Solution',
+        summary: "",
+        images: [
+            
+        ]
     },
     {
-        name: 'Coupon Management System  stem'
+        name: 'Coupon Management System  system',
+        summary: "",
+        images: [
+            
+        ]
     }
 ]
 
