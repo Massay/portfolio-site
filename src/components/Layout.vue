@@ -397,10 +397,10 @@ const experience = [
                         <h1 class="font-mono">[{{ index + 1 }}] <span class="font-bold"> {{ project.name }}</span> </h1>
                         <p class="text-xs lg:text-sm">{{ project.summary }}</p>
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4 p-2  overflow-hidden">
-                            <div  v-for="(image) in project.images" class="h-60 w-auto object-cover overflow-hidden">
-                                <img
+                            <div  v-for="(image) in project.images" class="flex-1 w-auto object-cover overflow-hidden">
+                                <!-- <img
                                 :src="'/portfolio-site/images/' + project.folder + '/' + image.logo"
-                                class="object-fill w-auto h-auto rounded-md border" :alt="image.logo">
+                                class="object-fill w-auto h-auto rounded-md border" :alt="image.logo"> -->
                             </div>
                         </div>
                     </div>
@@ -460,11 +460,21 @@ const experience = [
 
         </div>
 
-        <div class="lg:w-[25%] p-2 lg:inline-block bg-gray-300 hidden">
-
-            <div class="bg-yellow-500 rounded-md h-[198px]">
-                Side B
-            </div>
+        <div class="lg:w-[25%] p-2 lg:inline-block bg-gray-300 hidden md:fixed right-0 top-0">
+                <div class="flex flex-col  justify-around h-screen gap-3 py-1 px-2">
+                            <div class="bg-yellow-500 rounded-md flex-1">
+                                Side A
+                            </div>
+                            <div class="bg-blue-500 rounded-md  flex-1">
+                                Side B
+                            </div>
+                            <div class="bg-green-500 rounded-md flex-1">
+                                Side C
+                            </div>
+                            <div class="bg-orange-500 rounded-md flex-1">
+                                Side D
+                            </div>
+                </div>
         </div>
 
         <!-- <nav class="p-2 h-16">
