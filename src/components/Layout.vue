@@ -461,7 +461,7 @@ const experience = [
         </div>
 
         <div class="lg:w-[25%] p-2 lg:inline-block bg-gray-300 hidden md:fixed right-0 top-0">
-                <div class="flex flex-col  justify-around h-screen gap-3 py-1 px-2">
+                <div class="flex flex-col  justify-around h-screen gap-3 pt-1 pb-4 px-2">
                             <div class="bg-yellow-500 rounded-md flex-1">
                                 Side A
                             </div>
